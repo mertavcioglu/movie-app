@@ -15,11 +15,6 @@ function App() {
     selected: {}
   })
 
-  // const viewportmeta = document.querySelector('meta[name=viewport]');
-  // viewportmeta.setAttribute('content', "width=device-width, initial-scale=0");
-
-  var scale = 'scale(1)';
-
   const search = e => {
     if (e.key === "Enter") {
       axios(API_URL + "&s=" + state.s).then(({ data }) => {
@@ -29,7 +24,6 @@ function App() {
         })
       })
       document.getElementById("form").value = ""
-      document.body.style.transform = scale;
     }
   }
 
@@ -69,7 +63,6 @@ function App() {
           openPopup={openPopup}
         />
         {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup={closePopup} /> : false}
-
       </main>
     </div>
   );

@@ -5,7 +5,7 @@ function Search({ handleInput, search }) {
     <section className="search-box-wrapper">
       <input
         id="form"
-        // autoFocus
+        autoFocus
         autoComplete="off"
         type="text"
         className="search-box"
